@@ -1,9 +1,13 @@
-variable "pruebamap"{
-  type=map(string)
-  default={'1': 'Monday', '2': 'Tuesday', '3': 'Monday'}
+terraform{
+  required_providers{
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
 }
 
-variable "pruebalist"{
-  type=list
-  default=["a", 15, true]
+#Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
 }
