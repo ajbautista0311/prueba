@@ -1,1 +1,4 @@
-AWS_REGION = “us-eaft-1”
+variable "AWS_REGION"{
+  type=string
+  description="Aws Region"
+}
